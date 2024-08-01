@@ -73,9 +73,26 @@ abbr() {
   _abbr_debugger
 
   {
-    local action error_color job_name logs_silent_when_quiet logs_silent_when_quieter \
-      opt output release_date scope success_color type version warn_color
-    local -i dry_run force has_error number_opts quiet quieter should_exit
+    local action
+    local -i dry_run
+    local error_color
+    local -i force
+    local -i has_error
+    local job_name
+    local logs_silent_when_quiet
+    local logs_silent_when_quieter
+    local -i number_opts
+    local opt
+    local output
+    local release_date
+    local -i quiet
+    local -i quieter
+    local scope
+    local -i should_exit
+    local success_color
+    local type
+    local version
+    local warn_color
 
     dry_run=$ABBR_DRY_RUN
     force=$ABBR_FORCE
@@ -805,7 +822,8 @@ abbr() {
     _abbr:util_set_once() {
       _abbr_debugger
 
-      local option value
+      local option
+      local value
 
       option=$1
       value=$2
